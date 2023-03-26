@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body onload="captcha()">
+    
+    <div class="container">
+        <h2>REGISTER</h2>
+        <div class="signUpForm">
+            
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>Phone</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Password</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Confirm Password</span>
+            </div>
+            <div class="inputBox" id="captcha">
+                <input type="text" required="required" id="captchaInput">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <span>Captcha</span>
+                <div id="captcha-preview">
+                   <input type="text" readonly id="captchaGen">
+                </div>
+                <button id="refresh-btn" onclick="captcha()"><i class="fa fa-refresh"></i></button>
+            </div>
+            <div class="inputBox create-btn">
+                <input onclick="captchaValidation()" type="submit" value="Create Account">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
